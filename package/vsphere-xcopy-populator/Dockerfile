@@ -1,4 +1,4 @@
-FROM registry.suse.com/bci/golang:1.25.0 AS builder
+FROM registry.suse.com/bci/golang:1.26.4 AS builder
 WORKDIR /app
 COPY ./ ./
 RUN zypper -n install python && \
