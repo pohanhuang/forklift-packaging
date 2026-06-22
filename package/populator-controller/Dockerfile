@@ -1,4 +1,4 @@
-FROM registry.suse.com/bci/golang:1.25 AS builder
+FROM registry.suse.com/bci/golang:1.25.0 AS builder
 WORKDIR /app
 COPY --chown=1001:0 ./ ./
 RUN go build -buildvcs=false -ldflags="-w -s" github.com/kubev2v/forklift/cmd/populator-controller
